@@ -1,0 +1,64 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "Laravel",
+        "version": "1.0.0"
+    },
+    "servers": [
+        {
+            "url": "http:\/\/test-laravel.test"
+        }
+    ],
+    "paths": {
+        "\/api\/notes": {
+            "get": {
+                "summary": "Fetch all notes",
+                "requestBody": {
+                    "description": "A note object",
+                    "content": {
+                        "application\/json": {
+                            "schema": {
+                                "$ref": "#\/components\/schemas\/Note"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "$ref": "#\/components\/responses\/"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Note": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    },
+                    "body": {
+                        "type": "string"
+                    },
+                    "createdTime": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "responses": {
+            "": {
+                "description": "A note object",
+                "content": {
+                    "application\/json": {
+                        "schema": {
+                            "$ref": "#\/components\/schemas\/Note"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
