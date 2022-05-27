@@ -1,0 +1,655 @@
+{
+	"info": {
+		"_postman_id": "27ab6e51-2d72-49ee-a568-0f9ad8330f1a",
+		"name": "routes/web.php",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21101682"
+	},
+	"item": [
+		{
+			"name": "annotations",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/annotations",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"annotations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/annotations/{{annotationId}}",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"annotations",
+								"{{annotationId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAnnotationsInsideFolder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset/{{folderId}}/annotation?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset",
+								"{{folderId}}",
+								"annotation"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AnnotationGeojson",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset/annotation/{{annotationId}}/geojson",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset",
+								"annotation",
+								"{{annotationId}}",
+								"geojson"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assets",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/assets?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"assets"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAssetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset-by-asset/{{assetId}}",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset-by-asset",
+								"{{assetId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAssetByCompanyId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset/company/{{companyId}}?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset",
+								"company",
+								"{{companyId}}"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dataset Files",
+			"item": [
+				{
+					"name": "assetFiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset/files",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset",
+								"files"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "assetFiles",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{ROOT_URL}}/asset/files",
+									"host": [
+										"{{ROOT_URL}}"
+									],
+									"path": [
+										"asset",
+										"files"
+									]
+								}
+							},
+							"_postman_previewlanguage": null,
+							"header": null,
+							"cookie": [],
+							"body": null
+						}
+					]
+				},
+				{
+					"name": "getAssetFileById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset-files/file/{{assetFilesId}}",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset-files",
+								"file",
+								"{{assetFilesId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAssetFileByUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset-files/user/{{userId}}",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset-files",
+								"user",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAssetFileByDatasetId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset-files/dataset/{{datasetId}}",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset-files",
+								"dataset",
+								"{{datasetId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Dataset",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset/dataset?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset",
+								"dataset"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDatasetById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset/dataset-id/{{datasetId}}?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset",
+								"dataset-id",
+								"{{datasetId}}"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDatasetsByAssetId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset/dataset-asset-id/{{assetId}}?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset",
+								"dataset-asset-id",
+								"{{assetId}}"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDatasetFiles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset/dataset/{{datasetId}}/files?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset",
+								"dataset",
+								"{{datasetId}}",
+								"files"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asset Severity",
+			"item": [
+				{
+					"name": "getAssetSeverity",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset/severity/{{assetId}}?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset",
+								"severity",
+								"{{assetId}}"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "getUserbyUserId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/user/{{userId}}",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"user",
+								"{{userId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Annotation Folder",
+			"item": [
+				{
+					"name": "getAssetAnnotationFolder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/asset/{{assetId}}/folder?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"asset",
+								"{{assetId}}",
+								"folder"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pending Dataset",
+			"item": [
+				{
+					"name": "pendingDatasetUploadedBy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/pendingDataset/uploaded/{{userId}}?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"pendingDataset",
+								"uploaded",
+								"{{userId}}"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pendingDataset",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/pendingDataset/{{pendingDatasetId}}",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"pendingDataset",
+								"{{pendingDatasetId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Event Log",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/event/{{companyId}}/{{userId}}?page=1",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"event",
+								"{{companyId}}",
+								"{{userId}}"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Billing Company",
+			"item": [
+				{
+					"name": "processIncrement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "billing_company_id",
+									"value": "{{billing_company_id}}",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "{{amount}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ROOT_URL}}/admin/billing-company/processing/increment",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"admin",
+								"billing-company",
+								"processing",
+								"increment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "storageIncrement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "billing_company_id",
+									"value": "{{billing_company_id}}",
+									"type": "text"
+								},
+								{
+									"key": "amount",
+									"value": "{{amount}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{ROOT_URL}}/admin/billing-company/storage/increment",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"admin",
+								"billing-company",
+								"storage",
+								"increment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asset File",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{ROOT_URL}}/AssetFile/show/{{assetFileId}}",
+							"host": [
+								"{{ROOT_URL}}"
+							],
+							"path": [
+								"AssetFile",
+								"show",
+								"{{assetFileId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Successful request\", function () {",
+					"    pm.expect(pm.response.code).to.be.oneOf([200, 201, 202]);",
+					"});"
+				]
+			}
+		}
+	]
+}
