@@ -8,7 +8,7 @@ use GoldSpecDigital\ObjectOrientedOAS\Objects\Response;
 use Vyuldashev\LaravelOpenApi\Contracts\Reusable;
 use Vyuldashev\LaravelOpenApi\Factories\ResponseFactory;
 
-class NoteResponse extends ResponseFactory implements Reusable
+class SuccessNoteResponse extends ResponseFactory implements Reusable
 {
     public function build(): Response
     {

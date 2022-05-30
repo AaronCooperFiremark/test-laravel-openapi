@@ -26,6 +26,12 @@
                 "responses": {
                     "200": {
                         "$ref": "#\/components\/responses\/"
+                    },
+                    "400": {
+                        "$ref": "#\/components\/responses\/"
+                    },
+                    "500": {
+                        "$ref": "#\/components\/responses\/"
                     }
                 }
             }
@@ -34,6 +40,7 @@
     "components": {
         "schemas": {
             "Note": {
+                "description": "An object containing note details",
                 "type": "object",
                 "properties": {
                     "id": {

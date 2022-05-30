@@ -19,6 +19,7 @@ class NoteSchema extends SchemaFactory implements Reusable
     public function build(): SchemaContract
     {
         return Schema::object('Note')
+            ->description('An object containing note details')
             ->properties(
                 Schema::string('id'),
                 Schema::string('body'),
